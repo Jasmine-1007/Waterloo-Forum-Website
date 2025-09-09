@@ -1,0 +1,30 @@
+.welcome-container{
+    text-align: center;
+    padding: 70px 20px;
+    margin: 0 auto;
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  border-top: 3px solid #daab2d;
+  border-bottom: 3px solid #a4a5a7;
+}
+
+
+.welcome-title{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.welcome-subtitle{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.welcome-content{
+    font-size: 21px;
+    width: 80%;
+    margin: 40px auto;
+   text-align: center;
+}

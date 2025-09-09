@@ -1,0 +1,35 @@
+.footersection {
+}
+
+.footerband {
+    background-color: #daab2d80;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 50px;
+}
+
+.footercontainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 80px;
+}
+
+.titlehighlight{
+    width: fit-content;
+    border-bottom: 3px solid #daab2d80;
+    margin: 0px auto;
+}
+.links {
+   
+}
+.footerlogo {
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+
+.feedback {
+    margin-left: 40px;
+}

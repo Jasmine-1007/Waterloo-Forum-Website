@@ -1,0 +1,42 @@
+.mainSection {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    box-sizing: border-box;
+    width: 90vw;
+}
+
+.descriptionbox{
+  max-width: 600px;
+}
+@media (max-width: 768px) {
+  .mainSection {
+    flex-wrap: wrap;
+  }
+}
+
+.image {
+    position: relative;
+    display: inline-block;
+}
+.image img{
+    height: auto;
+    width: 450px;
+    margin-left:20px;
+    position: relative;
+    z-index:0;
+    border: 0.5px solid #daab2d;
+}
+
+.image::before{
+    content: "";
+  position: absolute;
+  width: 450px;
+  height: 100%;
+    background-color: #daab2d;
+    transform: rotate(-6deg);
+      z-index: 0; 
+
+}

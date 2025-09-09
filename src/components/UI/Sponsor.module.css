@@ -1,0 +1,41 @@
+.sponsorsection{
+    margin: 70px 0;
+    width: 100vw;
+    height: 400px;
+}
+
+.sponsorcontainer {
+    background: 
+    linear-gradient(rgba(99, 99, 98, 0.5), rgba(99, 99, 98, 0.5)), /* overlay */
+    url("/debateHall.png");
+    display: flex;
+    height: 60%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sponsortitle{
+    color: white;
+    max-width: 200px;
+    font-size: 28px;
+    border-bottom: 2px solid white;
+    margin: 20px;
+}
+.sponsordesciption {
+    color: white;
+    width: 70%;
+    margin-right: 20px;
+
+}
+
+
+.sponsorlogos img{
+    margin: 20px;
+    width: auto;
+    height: 125px;
+    transition: filter 300ms;
+}
+
+.sponsorlogos img:hover{
+   filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.3));
+}
