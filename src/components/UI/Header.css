@@ -1,7 +1,5 @@
-/* src/components/UI/Header.css */
-.navbar  {
-  /* display: flex;
-  justify-content: center; */
+/* Base: Mobile First */
+.navbar {
   position: fixed;
   top: 0;
   width: 100%;
@@ -11,69 +9,107 @@
 
 .navbarcontent {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-left: 160px;
-  margin-right: 50px;
-  
-  height: 62px;
-  width: 100vvw;
+  align-items: center;
+  padding: 0.75rem 1rem;
 }
 
-
-.navbar nav {
-  flex: 1;
+.logo-and-toggle {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  align-items: center;
 }
 
-.navbar nav a, .dropbtn  {
+.hamburger {
+  font-size: 24px;
+  background: none;
+  border: none;
   color: white;
-  display: inline-block;
-  padding: 15px 25px;
-  border-radius: 2px;
-  transition: background-color 0.3s;
+  cursor: pointer;
 }
 
-.dropbtn:hover {
-   transition: background-color 0.3s; 
-}
-
-.navbar nav > a:hover, .dropbtn:hover{
-   
-  background-color: #daab2d;
-  color: white;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
+/* Hidden by default on mobile */
+.nav-links {
   display: none;
-  text-align: left;
-  position: absolute;
+  flex-direction: column;
   background-color: #020b13;
-  min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 1001;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  padding: 1rem;
 }
 
-.dropdown-content a {
+.nav-links a, .dropbtn {
   color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  text-align: left;
 }
 
-.dropdown-content a:hover {
-  color: #daab2d;
+.nav-links a:hover, .dropbtn:hover {
+  background-color: #daab2d;
+  color: white;
+}
+
+
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  background-color: #020b13;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
+/* Show mobile nav when active */
+.nav-links.active {
+  display: flex;
+}
+
+.nav-links a:active {
+  background-color: #daab2d;
+  color: white;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .navbarcontent {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    gap: 1rem;
+    background: none;
+    padding: 0;
+  }
+
+  .nav-links a, .dropbtn {
+    padding: 15px 25px;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    background-color: #020b13;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    display: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}

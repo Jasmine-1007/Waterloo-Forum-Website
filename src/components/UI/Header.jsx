@@ -1,31 +1,39 @@
-// src/components/Header.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Button from '../Elements/Button';
 import './Header.css';
 
-
 const Header = () => {
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <header className='navbar'>
-    <div className='navbarcontent' >
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <div className="dropdown">
-          <Link className="dropbtn" to='#'>Event</Link>
-          <div className="dropdown-content" >
-            <Link to="/event/pastevent">Past Events</Link>
-            <Link to="/event/upcomingevent">Upcoming Events</Link>
+      <div className='navbarcontent'>
+        <div className='logo-and-toggle'>
+          <button className="hamburger" onClick={toggleMenu}>
+            ☰
+          </button>
+        </div>
+
+        <nav className={`nav-links ${isOpen ? 'active' : ''}`}>
+          <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
+          <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
+          <div className="dropdown">
+            <Link className="dropbtn" to="#">Event</Link>
+            <div className="dropdown-content">
+              <Link to="/event/pastevent" onClick={() => setIsOpen(false)}>Past Events</Link>
+              <Link to="/event/upcomingevent" onClick={() => setIsOpen(false)}>Upcoming Events</Link>
+            </div>
           </div>
-        </div>
-        {/* <Link to="/signup" className='join-us-button'>Join Us</Link> */}
-      </nav>
-      
-        <Button onClick={() => navigate("/signup")}>Join Us</Button>
-        </div>
+        </nav>
+
+        <Button onClick={() => { setIsOpen(false); navigate("/signup") }} className="join-button">
+          Join Us
+        </Button>
+      </div>
     </header>
   );
 };

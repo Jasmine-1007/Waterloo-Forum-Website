@@ -1,47 +1,78 @@
-/* About.module.css */
-
+/* Base: Mobile-first styles */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  margin: 2rem auto;
+  padding: 2rem;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #222;
   line-height: 1.6;
 }
 
 .hero {
-  font-size: 2.5rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #111;
-}
-
-.hero .highlight {
-  color: #ff4a1a; /* Matches the orange accent in screenshot */
-}
-
-.debateImage {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto 2rem;
-  border-radius: 8px;
-}
-
-.aboutTitle {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  text-align: left;
-  border-bottom: 3px solid #ff4a1a;
+  text-align: start;
+}
+
+.hero .highlight {
+  display: inline-block;
+  color: #a57a03;
+  border: 5px solid #a57a03;
+  border-radius: 15px;
+  padding: 0.25em 0.5em;
+}
+
+/* Flex setup for heading section */
+.headingcontainer {
+  display: flex;
+  flex-wrap: wrap;  /* allow wrapping on mobile */
+  gap: 1rem;
+}
+
+.debateImage {
+  width: 100%;
+  height: auto;
+  align-self: center;
+  margin: 0 auto;
+}
+
+.aboutTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #a57a03;
   padding-bottom: 0.25rem;
   width: fit-content;
 }
 
 .aboutContent {
   font-size: 1rem;
-  white-space: pre-wrap; /* preserve line breaks */
+  white-space: pre-wrap;
   margin-top: 1rem;
-  text-align: left;
+}
+
+/* Tablets and up */
+@media (min-width: 768px) {
+  .hero {
+    font-size: 2.5rem;
+  }
+  .container {
+    padding: 3rem;
+  }
+  .headingcontainer {
+    flex-wrap: nowrap; /* return to row layout */
+  }
+  .debateImage {
+    width: 500px; /* fixed width for larger screens */
+  }
+}
+
+/* Desktops and up */
+@media (min-width: 992px) {
+  .hero {
+    font-size: 3rem;
+  }
+  .container {
+    max-width: 1200px;
+  }
 }

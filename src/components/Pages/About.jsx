@@ -2,12 +2,14 @@ import styles from './About.module.css';
 
 function About() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} >
+    <div className={styles.headingcontainer}>
       <p className={styles.hero}>
-        Foster <span className={styles.highlight}>Civil Yet Robust</span> Debate on Campus
+        Fostering <br></br> <span className={styles.highlight}>Civil Yet Robust</span>
+        <br></br>Debate on Campus
       </p>
       <img className={styles.debateImage} src="/debate.jpg" alt="Debate" />
-
+    </div>
       <h2 className={styles.aboutTitle}>About Us</h2>
       <p className={styles.aboutContent}>
         “What’s the Waterloo Forum?”
@@ -16,6 +18,7 @@ function About() {
 
         Thank you for being remarkable,
       </p>
+    
     </div>
   );
 }

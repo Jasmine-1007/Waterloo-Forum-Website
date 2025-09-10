@@ -11,7 +11,13 @@
 }
 .heading{
     display: inline-block;
+    
     height: 90px;
-    width: 300px;
+    width: max-content;
+}
+
+.header h2{
     background: linear-gradient( transparent 60%, #daab2d 60%);
+    width: 105%; 
+   
 }
