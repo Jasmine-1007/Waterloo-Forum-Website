@@ -1,14 +1,20 @@
 /* Base: Mobile-first styles */
 .container {
-  margin: 2rem auto;
-  padding: 2rem;
+  padding-top: 5rem;
+ 
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #222;
   line-height: 1.6;
 }
 
+.Aboutbody {
+    margin: 2rem auto;
+  padding: 2rem;
+}
+
 .hero {
-  font-size: 2rem;
+    padding-left: 2rem;
+  font-size: 2.3rem;
   font-weight: 600;
   margin-bottom: 1rem;
   text-align: start;
@@ -24,16 +30,23 @@
 
 /* Flex setup for heading section */
 .headingcontainer {
+     padding-bottom: 2rem;
+     padding-top: 2rem;
+ width: 100vw;
   display: flex;
   flex-wrap: wrap;  /* allow wrapping on mobile */
-  gap: 1rem;
+  /* gap: 1rem; */
+  background-color: rgb(224, 224, 223);
 }
 
 .debateImage {
-  width: 100%;
-  height: auto;
+  width: 100vw;
+  height: 70%;
   align-self: center;
-  margin: 0 auto;
+  mask-image: linear-gradient(to top, transparent 0%, rgb(197, 197, 197) 10%, black 90%, transparent 100%),
+              linear-gradient(to left, transparent 0%, black 5%, black 95%, transparent 100%);
+  mask-composite: intersect;
+
 }
 
 .aboutTitle {
@@ -43,6 +56,11 @@
   border-bottom: 3px solid #a57a03;
   padding-bottom: 0.25rem;
   width: fit-content;
+}
+
+.Aboutbody img{
+    width: 90vw;
+    height: auto;
 }
 
 .aboutContent {
@@ -56,14 +74,16 @@
   .hero {
     font-size: 2.5rem;
   }
-  .container {
-    padding: 3rem;
-  }
+  
   .headingcontainer {
     flex-wrap: nowrap; /* return to row layout */
   }
   .debateImage {
     width: 500px; /* fixed width for larger screens */
+  margin: 0 auto;
+
+  mask-image: linear-gradient(to top, transparent 0%, rgb(197, 197, 197) 10%, black 90%, transparent 100%),
+              linear-gradient(to left, transparent 0%, black 5%, black 95%, transparent 95%);
   }
 }
 

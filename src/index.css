@@ -24,13 +24,12 @@ html { font-size: 16px; }
 }
 a {
   font-weight: 500;
+  font-size: 1rem;
   color: black;
   text-decoration: inherit;
   text-align: center;
 }
-a:hover {
-  color: #535bf2;
-}
+
 
 svg {
   width: 40px;
@@ -38,13 +37,16 @@ svg {
 }
 h2{
     font-family: "Monomakh", system-ui;
-    font-size: clamp(2.3em, 5.5vw, 2.8em);
+    font-size: clamp(2.1em, 5.5vw, 2.3em);
 }
 
 h3{
     font-size: 1.8rem;
 }
 
+h4{
+  font-size: 1.1rem;
+}
 
 p{
   font-size: 1rem;
@@ -54,7 +56,7 @@ body {
    box-sizing: border-box;
   
   padding: 0;
-  place-items: center;
+  /* place-items: center; */
   min-width: 320px;
   
   min-height: 100vh;
@@ -72,9 +74,7 @@ h1 {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
-  }
+  
   button {
     background-color: #f9f9f9;
   }

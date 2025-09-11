@@ -30,12 +30,18 @@
 
 
 .sponsorlogos img{
-    margin: 20px;
+    margin: 0.8rem;
     width: auto;
-    height: 125px;
+    height: 8rem;
     transition: filter 300ms;
 }
 
 .sponsorlogos img:hover{
    filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.3));
+}
+
+@media (max-width: 500px){
+    .sponsorlogos img{
+        height: 6rem;
+    }
 }

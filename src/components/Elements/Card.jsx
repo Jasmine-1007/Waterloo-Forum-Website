@@ -1,18 +1,22 @@
 import React from 'react';
 import styles from "./Card.module.css";
+import style from "./Button.module.css";
 import Button from './Button';
 import { Link } from 'react-router-dom';
 
 function Card({children}) {
   return (
     <section className={styles.cardsection}>
-        <div className={styles.cardcontianer}>
-            <div><h4>{children[0]}</h4>
+        <div className={styles.cardcontainer}>
+          <div className={styles.headingline}>
+            <div className={styles.title} >
+            <img style={{width: '30px', height:"30px", color: 'white'}} src='/emailicon.webp'></img>
+              <h4 style={{color: 'white'}}> {children[0]}</h4>
 
-            <img style={{width: '20px', height:"20px"}} src='/email.svg'></img>
             </div>
-            <Link to={'../UI/Sign-up.jsx'}><Button>{children[1]}</Button></Link>
-            <p>{children[2]}</p>
+            <Button className={style.buttonrounder}><Link style={{color: 'white', letterSpacing: '0.9px', whiteSpace: 'nowrap'}} to={'../UI/Sign-up.jsx'}>{children[1]}</Link></Button>
+            </div>
+            <p style={{color: 'white', marginBottom: '0.8rem', marginTop: '0'}}>{children[2]}</p>
         </div>
     </section>
   )

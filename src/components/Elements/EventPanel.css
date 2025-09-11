@@ -5,7 +5,7 @@
     align-items: center;
     gap: 30px;
     box-sizing: border-box;
-    width: 90vw;
+    width: 85vw;
 }
 
 .descriptionbox{
@@ -49,5 +49,6 @@
 @media (max-width: 1024px) {
   .mainSection {
     flex-wrap: wrap;
+    width: 70vw;
   }
 }

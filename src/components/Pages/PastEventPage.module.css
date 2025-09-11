@@ -1,6 +1,6 @@
 /* Base Styles */
 section {
-  margin: 2rem auto;
+  /* margin: 2rem auto; */
   /* padding: 2rem; */
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #222;
@@ -8,6 +8,7 @@ section {
 }
 
 .imageContainer {
+  padding-top: 3.3rem;
   position: relative;
   width: 100vw;   /* Full width */
   height: 40vh;   /* Adjust as needed */
@@ -39,19 +40,19 @@ section {
 .section {
   /* padding: 2rem; */
   background-color: rgba(245, 240, 207, 0.5);
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .eventTitle {
   border-bottom: 1px solid black;
   margin: 9vw 8vw;
   text-align: start;
-  font-size: clamp(2.0em, 4.0vw, 2.7em);;
+  font-size: clamp(2.0em, 2.3rem, 2.7em);;
 }
 
 .eventSubtitle {
   text-align: start;
-  font-size: 3vw;
+  font-size: 1.7rem;
   margin-left: 1rem;
   margin-top: 2rem;
 

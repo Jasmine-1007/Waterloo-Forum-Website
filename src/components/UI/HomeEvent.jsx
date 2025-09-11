@@ -28,8 +28,8 @@ const eventdetail  = {
                    imgAlt={"e7Image"}/>
     
     <div>
-        <h2 style={{margin: '40px'}}>Register Now!</h2>
-        <Button style={{width: "150px", margin: "20px auto"}} onClick={()=> {navigate("/signup")}}>REGISTER TODAY</Button>
+        <h2 style={{margin: '3.5rem'}}>Register Now!</h2>
+        <Button style={{width: "150px", margin: "20px auto"}} onClick={()=> {navigate("/sign-up")}}>REGISTER TODAY</Button>
         </div>
     </div>
   )

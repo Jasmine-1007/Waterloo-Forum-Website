@@ -3,6 +3,8 @@ import styles from './PastEventPage.module.css';
 import Button from '../Elements/Button';
 import Card from '../Elements/Card';
 import EventPanel from '../Elements/EventPanel';
+import { useLocation} from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 
@@ -43,6 +45,21 @@ const speakers = [
 ];
 
 function PastEventPage() {
+
+
+  const location = useLocation();
+
+  useEffect(()=> {
+    if(location.hash){
+      setTimeout(()=> {
+        const loc = document.querySelector(location.hash);
+        if(loc){
+          loc.scrollIntoView({behavior: 'smooth' });
+        }
+      })
+    }
+  })
+
   return (
     <section className={styles.section} aria-labelledby="past-events-heading">
       <div className={styles.imageContainer}>
@@ -50,8 +67,8 @@ function PastEventPage() {
   <h2 class={styles.overlayTitle}>Past Events</h2>
 </div>
 
-      <h2 className={styles.eventTitle}>Summer 2025</h2>
-      <div className={styles.panel}>
+      <h2 id='pilot' className={styles.eventTitle}>Summer 2025</h2>
+      <div  className={styles.panel}>
         <h3 className={styles.eventSubtitle}>• Pilot Debate</h3>
         <EventPanel
           eventdetail={pastEvent}

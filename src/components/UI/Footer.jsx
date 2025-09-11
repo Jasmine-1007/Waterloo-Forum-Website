@@ -2,7 +2,10 @@ import React from 'react';
 import styles from './Footer.module.css';
 import { Link } from 'react-router-dom';
 import Button from '../Elements/Button';
+import Card from '../Elements/Card';
 
+
+const cardele = ['Join our email list', 'SIGN UP','Get updates, event alerts, and be a part of us!'];
 function Footer() {
   return (
     <section className={styles.footersection}>
@@ -51,7 +54,7 @@ function Footer() {
            
 
         </div>
-       
+       <Card>{cardele}</Card>
     </section>
   )
 }

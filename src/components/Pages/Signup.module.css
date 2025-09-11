@@ -1,0 +1,112 @@
+/* Mobile-first base styles */
+.welcomeContainer {
+    padding-top: 8rem;
+  background-color: #daab2d20;
+  color: rgb(108, 100, 7);
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+
+main {
+  /* max-width: 500px; */
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* background-color: #daab2d30; */
+  padding: 20px 50px;
+  border-radius: 10px;
+  /* border: 2px solid #c19925; */
+}
+
+.signUpForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.signUpForm input,
+.signUpForm select {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: white;
+  color: white;
+}
+
+.signUpForm input:focus,
+.signUpForm select:focus {
+  outline: 2px solid #daab2d;
+}
+
+form button {
+    width: 200px;
+  background-color: #daab2d;
+  color: black;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+}
+
+form button:active {
+ background-color: #c19925; 
+}
+
+form button:hover {
+  background-color: #c19925;
+}
+
+/* Optional: Div wrappers for layout clarity */
+.firstName,
+.lastName,
+.Email,
+.selectStudent,
+.selectYear {
+  text-align: left;
+}
+
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+  .signUpForm {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .firstName,
+  .lastName,
+  .Email,
+  .selectStudent,
+  .selectYear {
+    width: 48%;
+  }
+
+form button {
+    /* display: inline-block; */
+    margin-top: 10px;
+    margin: 0 auto;
+
+
+  }
+
+  .welcomeContainer{
+     display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  }
+

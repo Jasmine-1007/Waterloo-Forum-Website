@@ -2,7 +2,11 @@ import React from 'react';
 import styles from './PastEventPage.module.css';
 import Button from '../Elements/Button';
 import Card from '../Elements/Card';
+import style from '../UI/Footer.module.css';
+
 import EventPanel from '../Elements/EventPanel';
+import { useEffect } from 'react';
+import { useLocation, Link } from 'react-router-dom';
 
 
 
@@ -42,21 +46,49 @@ const speakers = [{
 
 
 function UpcomingEventPage() {
+
+
+  const location = useLocation();
+
+  useEffect(()=> {
+    if(location.hash){
+      setTimeout(()=> {
+        const loc = document.querySelector(location.hash);
+        if(loc){
+          loc.scrollIntoView({behavior: 'smooth' });
+        }
+      })
+    }
+  })
   return (
 
     <section className={styles.section} aria-labelledby="past-events-heading">
       <div className={styles.pasteventheader} >
+        <div className={styles.imageContainer}>
+  <img src="/pilot/debaters1.png" alt="Event Header" />
       <div className={styles.headerRow}>
-        <h2 id="past-events-heading" className={styles.title}>Upcoming Events</h2>
+        <h2 id="past-events-heading" className={styles.overlayTitle}>Upcoming Events</h2>
+        </div>
       </div>
       </div>
-      <h2 style={{borderBottom: '1px solid black', margin: 'auto 30px', textAlign: 'start'}} >Fall 2025</h2>
+      <h2 id='aidebate' className={styles.eventTitle} >Fall 2025</h2>
       <div className={styles.panel}>
-        <h3 style={{fontSize: '25px', textAlign: 'start', marginLeft:'30px'}} >• AI Debate</h3>
+        <h3 className={styles.eventSubtitle} >• AI Debate</h3>
        <EventPanel 
        eventdetail={pastEvent}
-                   imgSrc={"/groupphoto.jpg"}
+                   imgSrc={"/Posters/AIdebate.jpg"}
                    imgAlt={"pilot debate poster"}/>
+
+                <div style={{marginTop:'4rem'}}>
+          
+                  <a>
+  Seating is limited so{" "}
+  <Link to="/sign-up" className={style.titlehighlight}>
+    Register Today!
+  </Link>
+</a>
+
+                  </div>
             <h3  style={{textAlign: 'start', marginLeft: '70px', marginTop: '70px'}}>Speakers:</h3>
           <div className={styles.speakerSection}>
             {speakers.map((s) => {

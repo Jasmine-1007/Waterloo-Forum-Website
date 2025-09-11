@@ -9,6 +9,9 @@ import About from './components/Pages/About.jsx';
 import NotFound from './components/Pages/NotFound.jsx';
 import PastEventPage from './components/Pages/PastEventPage.jsx';
 import UpcomingEventPage from './components/Pages/UpcomingEventPage.jsx';
+import Signup from './components/Pages/Signup.jsx';
+import OnSubmit from './components/Pages/OnSubmit.jsx';
+import ContactUs from './components/Pages/ContactUs.jsx';
 
 const router  = createBrowserRouter([
   {
@@ -35,7 +38,19 @@ const router  = createBrowserRouter([
   {
     path: '/about',
     element: <About/>
-  }
+  },
+  {
+    path: '/sign-up/',
+    element : <Signup />,
+  },
+  {
+      path: '/sign-up/submit',
+      element: <OnSubmit />
+    },
+    {
+      path: '/contact-us',
+      element: <ContactUs />
+    }
     ]
   },
   
