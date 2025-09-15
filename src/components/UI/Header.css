@@ -88,6 +88,10 @@
   display: flex;
 }
 
+.headerlogo {
+  display: none;
+}
+
 .nav-links a:active {
   background-color: #daab2d;
   color: white;
@@ -97,6 +101,10 @@
 @media (min-width: 768px) {
   .hamburger {
     display: none;
+  }
+
+  .headerlogo {
+    display: block;
   }
 
   .navbarcontent {

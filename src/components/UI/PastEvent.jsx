@@ -6,15 +6,15 @@ import Button from '../Elements/Button';
 const pastVideos = [
   {
     id: 1,
-    title: "Past event one ",
-    date: "2025-06-12",
-    youtubeId: "CfZdGgsbcoo"},
-  {
-    id: 2,
-    title: "Past event two",
-    date: "2025-04-03",
-    youtubeId: "CfZdGgsbcoo"
-  }]
+    title: "Pilot Debate | Should Universities Lift Restrictions on AI?",
+    date: "2025-07-31",
+    youtubeId: "jbwb2d1dGr0"},]
+  // {
+  //   id: 2,
+  //   title: "Past event two",
+  //   date: "2025-04-03",
+  //   youtubeId: "CfZdGgsbcoo"
+  // }]
 
 function PastEvent() {
   return (

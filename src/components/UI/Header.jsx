@@ -18,7 +18,7 @@ const Header = () => {
             ☰
           </button>
         </div>
-
+      <div className="headerlogo"><img style={{width: '50px'}} src="/logo-removebg.png" alt="logo image header"></img></div>
         <nav className={`nav-links ${isOpen ? "active" : ""}`}>
           <Link to="/" onClick={() => setIsOpen(false)}>
             Home

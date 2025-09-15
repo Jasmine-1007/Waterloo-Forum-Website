@@ -41,20 +41,20 @@ function Footer() {
         <div className={styles.links}>
           <em>
             <h4 className={styles.titlehighlight} >Links</h4>
-            <p><Link to={"/"}>Home</Link></p>
-            <p><Link to={"/event"}>Upcoming Events</Link></p>
-            <p><Link to={'/about'}>About Us</Link></p></em>
+            <p><Link onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} to={"/"}>Home</Link></p>
+            <p><Link onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}to={"/event/upcomingevent"}>Upcoming Events</Link></p>
+            <p><Link onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} to={'/about'}>About Us</Link></p></em>
         </div> 
         
         <div className={styles.feedback}>
             <p>Have Suggestions?</p>
             <p>Send us a feedback!</p>
-            <Button><Link to={"/signup"}>Feedback</Link></Button>
+            <Button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><Link to={"/signup"}>Feedback</Link></Button>
         </div>
            
 
         </div>
-       <Card>{cardele}</Card>
+       <Card btnlink={'/sign-up'}>{cardele}</Card>
     </section>
   )
 }

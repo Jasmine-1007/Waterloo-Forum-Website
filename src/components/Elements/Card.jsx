@@ -4,7 +4,7 @@ import style from "./Button.module.css";
 import Button from './Button';
 import { Link } from 'react-router-dom';
 
-function Card({children}) {
+function Card({children, btnlink}) {
   return (
     <section className={styles.cardsection}>
         <div className={styles.cardcontainer}>
@@ -14,7 +14,7 @@ function Card({children}) {
               <h4 style={{color: 'white'}}> {children[0]}</h4>
 
             </div>
-            <Button className={style.buttonrounder}><Link style={{color: 'white', letterSpacing: '0.9px', whiteSpace: 'nowrap'}} to={'../UI/Sign-up.jsx'}>{children[1]}</Link></Button>
+            <Button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className={style.buttonrounder}><Link style={{color: 'white', letterSpacing: '0.9px', whiteSpace: 'nowrap'}} to={btnlink}>{children[1]}</Link></Button>
             </div>
             <p style={{color: 'white', marginBottom: '0.8rem', marginTop: '0'}}>{children[2]}</p>
         </div>

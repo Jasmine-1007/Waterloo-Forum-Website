@@ -14,7 +14,7 @@ function OurHistory(){
         />
       </div>
       <div className="text-container">
-        <h2>Our History</h2>
+        <h2>Our Story</h2>
         <p>
           Our benefactor, Mr. Willis S. McLeese, wanted to ensure that students within Canada 
           would learn communication and leadership skills. Today, we continue his legacy 

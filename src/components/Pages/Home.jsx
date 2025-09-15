@@ -10,9 +10,19 @@ import styles from './Home.module.css';
 function Home(){
     return (
         <div>
-            
-          <img src="/logo.png" className={styles.logo} alt="Vite logo" />
-        <h1 style={{marginBottom: "100px"}}>Waterloo Forum</h1>
+  
+      <div className={styles.hero}>
+        <video autoPlay muted loop playsInline className={styles.bgVideo}>
+          <source src="/heroVid.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div className={styles.heroContent}>
+          {/* <img src="/logo.png" className={styles.logo} alt="Waterloo Forum logo" /> */}
+          <h1 className={styles.fadein}>The Waterloo Forum</h1>
+        </div>
+      </div>
+
         <HomeEvent />
         <Welcome />
         {/* <button onClick={() => setCount((count) => count + 1)}>

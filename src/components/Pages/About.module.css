@@ -5,7 +5,12 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #222;
   line-height: 1.6;
+  margin: 0 auto;
+  text-align: left;
 }
+
+
+
 
 .Aboutbody {
     margin: 2rem auto;
@@ -13,7 +18,7 @@
 }
 
 .hero {
-    padding-left: 2rem;
+    margin: 2rem 0;
   font-size: 2.3rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -39,6 +44,9 @@
   background-color: rgb(224, 224, 223);
 }
 
+.container p{
+    margin: 2rem auto;
+}
 .debateImage {
   width: 100vw;
   height: 70%;
@@ -73,7 +81,12 @@
 @media (min-width: 768px) {
   .hero {
     font-size: 2.5rem;
+     padding-left: 2rem;
   }
+  .container p{
+    margin: 3rem auto;
+    width: 70vw;
+}
   
   .headingcontainer {
     flex-wrap: nowrap; /* return to row layout */
