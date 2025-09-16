@@ -57,17 +57,14 @@
 }
 
 .links a:hover,
-.feedback a:hover,
 .contact a:hover,
 .links a:focus,
-.feedback a:focus,
 .contact a:focus {
   color: #daab2d;
   text-decoration: underline;
 }
 
 .links a:active,
-.feedback a:active,
 .contact a:active {
   color: white;
   background-color: #daab2d;

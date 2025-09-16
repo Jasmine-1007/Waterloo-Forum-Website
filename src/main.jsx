@@ -12,6 +12,8 @@ import UpcomingEventPage from './components/Pages/UpcomingEventPage.jsx';
 import Signup from './components/Pages/Signup.jsx';
 import OnSubmit from './components/Pages/OnSubmit.jsx';
 import ContactUs from './components/Pages/ContactUs.jsx';
+import Feedback from './components/Pages/FeedbackForm.jsx';
+import Live from './components/Pages/Live.jsx';
 
 const router  = createBrowserRouter([
   {
@@ -50,6 +52,14 @@ const router  = createBrowserRouter([
     {
       path: '/contact-us',
       element: <ContactUs />
+    },
+    {
+      path: '/feedback',
+      element: <Feedback />
+    },
+    {
+      path: '/live',
+      element: <Live />
     }
     ]
   },

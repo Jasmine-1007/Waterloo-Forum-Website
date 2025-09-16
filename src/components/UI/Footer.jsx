@@ -49,7 +49,7 @@ function Footer() {
         <div className={styles.feedback}>
             <p>Have Suggestions?</p>
             <p>Send us a feedback!</p>
-            <Button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><Link to={"/signup"}>Feedback</Link></Button>
+            <Button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><Link to={"/feedback"}>Feedback</Link></Button>
         </div>
            
 

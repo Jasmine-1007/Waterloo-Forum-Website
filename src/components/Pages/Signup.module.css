@@ -32,15 +32,15 @@ main {
 }
 
 .signUpForm input,
-.signUpForm select {
+.signUpForm select,textarea {
   width: 100%;
-  max-width: 400px;
+  /* max-width: 400px; */
   padding: 10px;
   border: none;
   border-radius: 6px;
   font-size: 1rem;
   background-color: white;
-  color: white;
+  color: black;
 }
 
 .signUpForm input:focus,
@@ -94,6 +94,12 @@ form button:hover {
   .selectYear {
     width: 48%;
   }
+
+.Feedback {
+   width: 80vw;
+}
+
+
 
 form button {
     /* display: inline-block; */
