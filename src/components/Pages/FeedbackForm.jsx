@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./Signup.module.css";
 import Select from "react-select";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
@@ -62,6 +62,7 @@ function Feedback() {
 
                 <button type='submit' style={{backgroundColor: "none"}}>Join</button>
         </form>
+        <button><Link to={'/live'}>Live</Link></button>
         </main>
     </div>
   )
