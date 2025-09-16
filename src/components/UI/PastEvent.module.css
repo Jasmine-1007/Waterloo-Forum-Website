@@ -1,5 +1,5 @@
 .section {
-  width: 90vw;
+  width: 80vw;
   max-width: 1200px;
   margin: 40px auto;
   padding: 8px;
@@ -20,8 +20,9 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  /* display: grid; */
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 10rem));
   gap: 16px;
 }
 

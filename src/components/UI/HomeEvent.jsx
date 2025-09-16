@@ -23,7 +23,7 @@ const eventdetail  = {
     <div className={styles.eventSection}>
        <div className={styles.header}> <div className={styles.heading}><h2>Upcoming Event</h2></div></div>
        <EventPanel eventdetail={eventdetail}
-                   imgSrc={"/e7.png"}
+                   imgSrc={"/place/e7.png"}
                    imgAlt={"e7Image"}/>
     
     <div>

@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react'
 
 
 
@@ -8,24 +7,29 @@ function Live() {
     const messageRef = useRef(null);
     const socketRef = useRef(null);
 
+const [response, setResponse] = useState([]); // store server message
+
 
     useEffect(()=> {
         socketRef.current = new WebSocket("ws://localhost:4000");
 
-        socketRef.onopen = ()=> {
+        console.log("mounted.");
+
+        socketRef.current.onopen = ()=> {
             console.log("Connected.");
         }
-        socketRef.onmessage = (msg) => {
-            const data = JSON.parse(msg.data);
-            console.log(`"received message: ${data}"`);
+        socketRef.current.onmessage = (event) => {
+            setResponse((prev)=> [...prev, event.data]);
+            console.log("received message:", response);
         }
 
-        return ()=> {
-            socketRef.close();
-        }
-    })
+        return () => {
+    socketRef.current.close();
+  };
 
-    const navigate = useNavigate();
+
+    });
+
 
     const handleSubmit = (e)=> {
 
@@ -35,14 +39,18 @@ function Live() {
       // send message in your server format
       socketRef.current.send(JSON.stringify({ type: "message", msg }));
     }
-    navigate('/sign-up/submit', { state: { message: 'Form submitted successfully!' } });
+    // navigate('/sign-up/submit', { state: { message: 'Form submitted successfully!' } });
 }
   return (
-    <div >
-        <form style={{paddingTop: '5rem'}} onSubmit={handleSubmit}>
+    <div style={{paddingTop: '5rem'}} >
+        <form  onSubmit={handleSubmit}>
             <label name="livemsg">Message: </label>
             <textarea ref={messageRef} id='livemsg'></textarea>
             <button type='submit'>Submit</button>
+
+            <ul>{response.map((r, index)=> {
+                return <li key={index}>{r}</li>
+            })}</ul>
         </form>
     </div>
   )

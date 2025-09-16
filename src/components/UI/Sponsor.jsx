@@ -8,9 +8,9 @@ function Sponsor() {
     <div className={styles.sponsorcontainer}>
         <h3 className={styles.sponsortitle} >Sponsorship Opportunities</h3>
 
-        <text className={styles.sponsordesciption}>Our benefactor, Mr. Willis S. McLeese, wanted to ensure that students within Canada 
-          would learn communication and leadership skills. Today, we continue his legacy 
-          across Canada working</text>
+        <text className={styles.sponsordesciption}>The Waterloo Forum is generously sponsored by the Office of Research of Univeristy of Waterloo as part of its initiative to conduct honest and beneficial research on campus, and turn ideas into reality.<br></br>
+        Like our initiative? We welcome partners to join this mission of reviving intellectual zeal for opinions.
+        Become a sponsor today!</text>
         
     </div>
     <div className={styles.sponsorlogos}>

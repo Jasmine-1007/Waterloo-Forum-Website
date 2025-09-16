@@ -1,3 +1,4 @@
+import TeamSection from '../UI/OurTeam';
 import styles from './About.module.css';
 
 function About() {
@@ -29,7 +30,7 @@ function About() {
         Thank you for being remarkable,
       </p>
       <h2 className={styles.aboutTitle}>Our Team</h2>
-    
+      <TeamSection /> 
     </div>
     </div>
   );

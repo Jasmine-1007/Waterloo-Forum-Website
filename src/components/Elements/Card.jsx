@@ -10,7 +10,7 @@ function Card({children, btnlink}) {
         <div className={styles.cardcontainer}>
           <div className={styles.headingline}>
             <div className={styles.title} >
-            <img style={{width: '30px', height:"30px", color: 'white'}} src='/emailicon.webp'></img>
+            <img style={{width: '30px', height:"30px", color: 'white'}} src='/assets/emailicon.webp'></img>
               <h4 style={{color: 'white'}}> {children[0]}</h4>
 
             </div>

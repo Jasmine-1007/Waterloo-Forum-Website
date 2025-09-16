@@ -9,7 +9,7 @@ function ContactUs() {
       <div className="contact-info">
         <div className="info-item">
           <h2>Email:</h2>
-          <p>support@waterloo-forum.com</p>
+          <p>thewaterlooforum@gmail.com</p>
         </div>
 
         <div className="info-item">

@@ -1,18 +1,26 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from '../Elements/Button';
 import Card from '../Elements/Card';
 
 
 const cardele = ['Join our email list', 'SIGN UP','Get updates, event alerts, and be a part of us!'];
 function Footer() {
+
+  const navigate = useNavigate();
+
+  const handleClick = ()=> {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigate('/feedback');
+  }
+
   return (
     <section className={styles.footersection}>
       
       <div className={styles.footerband}>
         <div className={styles.footerlogo}>
-        <img style={{width: '90px', height: '90px', borderRight: "1px solid black"}} src='/logo-removebg.png' alt='logo picture'></img>
+        <img style={{width: '90px', height: '90px', borderRight: "1px solid black"}} src='/assets/logo-removebg.png' alt='logo picture'></img>
         <p style={{maxWidth: '80px', marginLeft: '5px', fontFamily: 'Monomakh'}}>The Waterloo Forum</p></div>
         
          <div style={{display: 'flex', alignItems: 'center', fontFamily: 'Monomakh',gap:'5px'}}>
@@ -49,7 +57,7 @@ function Footer() {
         <div className={styles.feedback}>
             <p>Have Suggestions?</p>
             <p>Send us a feedback!</p>
-            <Button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><Link to={"/feedback"}>Feedback</Link></Button>
+            <Button onClick={handleClick}>Feedback</Button>
         </div>
            
 

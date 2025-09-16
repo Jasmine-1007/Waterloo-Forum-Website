@@ -8,7 +8,7 @@ function OurHistory(){
     <div className="history-section">
       <div className="image-container">
         <img 
-          src="/debateHall.png" 
+          src="/place/debateHall.png" 
           alt="debate hall" 
           className="history-image" 
         />
@@ -16,10 +16,13 @@ function OurHistory(){
       <div className="text-container">
         <h2>Our Story</h2>
         <p>
-          Our benefactor, Mr. Willis S. McLeese, wanted to ensure that students within Canada 
-          would learn communication and leadership skills. Today, we continue his legacy 
-          across Canada working with various groups, schools, and communities to ensure that 
-          no child is left behind.
+          Started by current president Jordan Bauman, we exist to create dialogue on campus by
+hosting public debates. Our events will
+present attendees with new ideas and
+deepen their understanding of diverse topics.
+We hope that seeing robust debates will
+encourage community members to think
+deeply with others.
         </p>
         <Link to="/About" className="continue-button">About Us</Link>
       </div>/
