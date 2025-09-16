@@ -39,7 +39,7 @@ function Live() {
 }
   return (
     <div >
-        <form onSubmit={handleSubmit}>
+        <form style={{paddingTop: '5rem'}} onSubmit={handleSubmit}>
             <label name="livemsg">Message: </label>
             <textarea ref={messageRef} id='livemsg'></textarea>
             <button type='submit'>Submit</button>
