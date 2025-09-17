@@ -83,6 +83,9 @@
   display: block;
 }
 
+.join-button {
+  color: black;
+}
 /* Show mobile nav when active */
 .nav-links.active {
   display: flex;

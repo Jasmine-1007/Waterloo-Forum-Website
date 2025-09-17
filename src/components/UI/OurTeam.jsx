@@ -53,13 +53,13 @@ const teamMembers = [
     name: "Spencer Robinson",
     role: "Member",
     bio: "Spencer is a grade 12 student who will be attending WLU for Business Administration and Financial Math in the fall. He has experience coordinating venues for hackathons and fostering connections with local politicians to better enfranchise youth. He looks forward to helping build a more intellectual university culture and community",
-    image: "/team/Jordan.jpg"
+    image: "/team/person.jpg"
   },
   {
     name: "Ryan Charis",
     role: "Member",
     bio: "Ryan Charis recently graduated from Computer Science at UWaterloo. He and his wife Jasmine love to engage people in thoughtful dialogue, often over a nice homemade meal. He also co-hosts Deep Dive - weekly theme discussions amongst students to discuss the deeper questions in life. He is excited to see respectful debates within universities and demonstrate how we can be united in the midst of the diversity of perspectives in our student body.",
-    image: "/team/Jordan.jpg"
+    image: "/team/Ryan Photo.jpg"
   },
   {
     name: "Asha Cox",
