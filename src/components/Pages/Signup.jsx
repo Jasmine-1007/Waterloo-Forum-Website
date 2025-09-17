@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styles from "./Signup.module.css";
 import Select from "react-select";
 import { useNavigate } from 'react-router-dom';
@@ -22,17 +22,33 @@ const yearOptions = [
 
 function Signup() {
 
+     const [student, setStudent] = useState(null);
+  const [year, setYear] = useState(null);
     const navigate = useNavigate();
 
     const handleSubmit = (e)=> {
 
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    for (let [key, value] of formData.entries()) {
-        console.log({key, value});
-    }
+    const data = {
+      fname: formData.get("fname"),
+      lname: formData.get("lname"),
+      email: formData.get("email"),
+      student: student?.value || "",
+      year: year?.value || "",
+    };
+    console.log(data);
 
+    fetch("sign-up", {
+        method: "POST",
+         headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+
+    }).then(res => res.json()).then(result=> {
+        console.log(result);
     navigate('/sign-up/submit', { state: { message: 'Form submitted successfully!' } });
+    })
+
 
 
 }
@@ -41,7 +57,7 @@ function Signup() {
   return (
     <div  style={{border: 'none'}}>
         <main className={styles.welcomeContainer}>
-            <h2 style={{fontSize: "2rem"}}>Sign up to become a member now!</h2>
+            <h2 style={{fontSize: "2rem"}}>Join our Email List!</h2>
         <form onSubmit={handleSubmit}
         >
             <div className={styles.signUpForm}>
@@ -59,7 +75,7 @@ function Signup() {
                 </div>
                 <div className={styles.selectStudent}>
                     <label>Are you a student? </label>
-                    <Select name="student" options={studentOptions} styles={{
+                    <Select name="student" options={studentOptions}  value={student} onChange={setStudent} styles={{
                         option: (styles,stte)=> ({
                             ...styles, 
                             backgroundColor: stte.isFocused ? '#daab2d50': 'white',
@@ -68,7 +84,7 @@ function Signup() {
                 </div>
                 <div className={styles.selectYear}>
                     <label>If so, which year are you in? </label>
-                   <Select name="year" options={yearOptions}  styles={{
+                   <Select name="year" options={yearOptions} value={year} onChange={setYear} styles={{
                         option: (styles,stte)=> ({
                             ...styles, 
                             backgroundColor: stte.isFocused ? '#daab2d50': 'white',

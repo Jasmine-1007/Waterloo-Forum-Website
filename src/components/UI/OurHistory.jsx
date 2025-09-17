@@ -16,13 +16,7 @@ function OurHistory(){
       <div className="text-container">
         <h2>Our Story</h2>
         <p>
-          Started by current president Jordan Bauman, we exist to create dialogue on campus by
-hosting public debates. Our events will
-present attendees with new ideas and
-deepen their understanding of diverse topics.
-We hope that seeing robust debates will
-encourage community members to think
-deeply with others.
+          Founded by current president Jordan Bauman, The Waterloo Forum was created to spark conversation on campus. Nowadays, debate is often shallow and hostile. The Waterloo Forum is here initiate the discussions that matter in a respectful, academic context. We engage experts, with diverse viewpoints, to weigh in on current issues. 
         </p>
         <Link to="/About" className="continue-button">About Us</Link>
       </div>/

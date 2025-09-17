@@ -6,7 +6,7 @@ function About() {
     <div className={styles.container} >
     <div className={styles.headingcontainer}>
       <p className={styles.hero}>
-        Fostering <br></br> <span className={styles.highlight}>Civil Yet Robust</span>
+        Creating <br></br> <span className={styles.highlight}>Civil Yet Robust</span>
         <br></br>Debate on Campus
       </p>
       <img className={styles.debateImage} src="/groupphoto.jpg" alt="Debate" />
@@ -18,7 +18,6 @@ function About() {
 
         We're a student-led initiative—supported by the Office of Research—dedicated to building a culture of open dialogue, critical thinking, and diversity of thought on campus...
 
-        Thank you for being remarkable,
       </p>
       <img src='/pilot/audience2.png' alt='audience image'></img>
       <h2 className={styles.aboutTitle}>Our Story</h2>

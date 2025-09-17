@@ -22,3 +22,12 @@
   border-radius: 20px;
   padding: 0.7rem 1rem;
 }
+
+@media (max-width: 768px) {
+  .button:focus {
+  border: none;
+  box-shadow: none; /* if you have shadow effect on focus */
+}
+
+  
+}

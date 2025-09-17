@@ -62,7 +62,7 @@ function Feedback() {
 
                 <button type='submit' style={{backgroundColor: "none"}}>Join</button>
         </form>
-        <button><Link to={'/live'}>Live</Link></button>
+        {/* <button><Link to={'/live'}>Live</Link></button> */}
         </main>
     </div>
   )

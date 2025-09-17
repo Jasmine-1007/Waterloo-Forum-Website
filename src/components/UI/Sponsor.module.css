@@ -12,6 +12,7 @@
     height: 60%;
     align-items: center;
     justify-content: space-between;
+    padding: 10px;
 }
 
 .sponsortitle{
@@ -20,6 +21,7 @@
     font-size: 28px;
     border-bottom: 2px solid white;
     margin: 20px;
+    margin-top: 0px;
 }
 .sponsordesciption {
     color: white;
@@ -43,5 +45,13 @@
 @media (max-width: 500px){
     .sponsorlogos img{
         height: 6rem;
+    }
+    .sponsorcontainer {
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: center;
+    }
+    .sponsordesciption {
+        width: 80%;
     }
 }

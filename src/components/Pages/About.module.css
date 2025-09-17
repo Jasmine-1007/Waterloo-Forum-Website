@@ -1,6 +1,6 @@
 /* Base: Mobile-first styles */
 .container {
-  padding-top: 5rem;
+  padding-top: 4.4rem;
  
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #222;
@@ -19,6 +19,9 @@
     text-align: center;
 }
 
+.Aboutbody img {
+  width: 70vw;
+}
 .hero {
     margin: 2rem 0;
   font-size: 3rem;
@@ -87,7 +90,7 @@
 }
 
 .Aboutbody img{
-    width: 70vw;
+    width: 70%;
     margin: 0 auto;
     height: auto;
 }
