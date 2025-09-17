@@ -22,11 +22,14 @@ const yearOptions = [
 
 function Signup() {
 
+
+
      const [student, setStudent] = useState(null);
   const [year, setYear] = useState(null);
     const navigate = useNavigate();
 
-    const handleSubmit = (e)=> {
+    
+    const handleSubmit = async (e)=> {
 
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -39,19 +42,25 @@ function Signup() {
     };
     console.log(data);
 
-    fetch("sign-up", {
+    try {
+      const response = await fetch("https://formspree.io/f/mwpndykq", {
         method: "POST",
-         headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    }).then(res => res.json()).then(result=> {
-        console.log(result);
-    navigate('/sign-up/submit', { state: { message: 'Form submitted successfully!' } });
-    })
+      if (response.ok) {
+        navigate('/sign-up/submit', { state: { message: 'Form submitted successfully!' } });
+      } else {
+        console.error("Formspree error:", response.statusText);
+      }
+    } catch (err) {
+      console.error("Network error:", err);
+    }
+  };
 
-
-
-}
 
 
   return (
