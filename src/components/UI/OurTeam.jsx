@@ -23,7 +23,7 @@ const teamMembers = [
     name: "Stephen Fedy",
     role: "Member",
     bio: "Stephen embraces free speech as a foundation for open, respectful dialogue. He’s drawn to conversations where opposing views can be explored in good faith—not to win, but to better understand complex issues and engage thoughtfully with one another.",
-    image: "/team/Jordan.jpg"
+    image: "/team/person.jpg"
   },
   {
     name: "Jasmine Charis",

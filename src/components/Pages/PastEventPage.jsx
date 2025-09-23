@@ -72,7 +72,7 @@ function PastEventPage() {
         <h3 className={styles.eventSubtitle}>• Pilot Debate</h3>
         <EventPanel
           eventdetail={pastEvent}
-          imgSrc="/groupphoto.jpg"
+          imgSrc="/pilot/debaters1.png"
           imgAlt="pilot debate poster"
         />
         <h3 className={styles.h3highlight}>Speakers:</h3>

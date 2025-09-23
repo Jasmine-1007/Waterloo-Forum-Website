@@ -17,7 +17,7 @@
 .image {
     position: relative;
     display: inline-block;
-    width: 100%;
+    width: 100vw;
     margin: 0 auto;
 }
 .image img{
@@ -50,5 +50,15 @@
   .mainSection {
     flex-wrap: wrap;
     width: 70vw;
+  }
+}
+
+@media(max-width: 786px) {
+  .image img{
+    width: 350px;
+    margin: 0 auto;
+  }
+  .image::before{
+    width: 350px;
   }
 }
