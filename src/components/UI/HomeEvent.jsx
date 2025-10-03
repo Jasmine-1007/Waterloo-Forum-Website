@@ -22,6 +22,7 @@ const eventdetail  = {
   return (
     <div className={styles.eventSection}>
        <div className={styles.header}> <div className={styles.heading}><h2>Upcoming Event</h2></div></div>
+       <div style={{display: "none"}} className={styles.eventContent}>
        <EventPanel eventdetail={eventdetail}
                    imgSrc={"/place/e7.png"}
                    imgAlt={"e7Image"}/>
@@ -30,6 +31,8 @@ const eventdetail  = {
         <h2 style={{margin: '3.5rem'}}>Register Now!</h2>
         <Button href="https://forms.cloud.microsoft/r/bzAGeWnHg5" style={{width: "150px", margin: "50px auto"}}>REGISTER TODAY</Button>
         </div>
+        </div>
+        <div><h2>Stay tuned for more upcoming events!</h2></div>
     </div>
   )
 }
