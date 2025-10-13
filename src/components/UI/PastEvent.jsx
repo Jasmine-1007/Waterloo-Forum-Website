@@ -45,7 +45,7 @@ function PastEvent() {
         ))}
       </div>
       <button className='continue-button' style={{marginTop: '20px', fontSize: '15px'}} onClick={() => window.open("https://www.youtube.com/@DRMSH", "_blank")}>
-  <em>Visit Our YouTube Channel</em> ➙
+  <em>Visit Our YouTube Channel ➙</em> 
 </button>
 
     </section>
