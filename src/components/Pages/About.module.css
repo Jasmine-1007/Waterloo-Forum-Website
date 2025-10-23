@@ -19,7 +19,7 @@
     text-align: center;
 }
 
-.Aboutbody img {
+.Aboutbodyimg {
   width: 70vw;
 }
 .hero {
@@ -78,6 +78,20 @@
   margin-top: 1rem;
 }
 
+.poster{
+  width: 80vw;
+  margin: 10px;
+}
+
+  .hiring{
+    display: flex;
+    gap: 20;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+
 /* Tablets and up */
 @media (min-width: 768px) {
   .hero {
@@ -89,7 +103,7 @@
     width: 70vw;
 }
 
-.Aboutbody img{
+.Aboutbodyimg{
     width: 70%;
     margin: 0 auto;
     height: auto;
@@ -105,6 +119,11 @@
   mask-image: linear-gradient(to top, transparent 0%, rgb(197, 197, 197) 10%, black 90%, transparent 100%),
               linear-gradient(to left, transparent 0%, black 5%, black 95%, transparent 95%);
   }
+    .poster{
+    width: 40vw;
+    
+  }
+
 }
 
 /* Desktops and up */
@@ -112,7 +131,12 @@
   .hero {
     font-size: 3rem;
   }
-  .container {
-    max-width: 1200px;
+
+  .poster{
+    width: 40vw;
+    
   }
+ 
+
+  
 }

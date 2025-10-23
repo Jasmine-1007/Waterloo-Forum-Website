@@ -95,7 +95,7 @@ function TeamCard({member}) {
     className={`teamcard ${flipped ? "is-flipped" : "not-flipped"}`}>
                         <div
                         className="front-page">
-                        <img style={{width: '50%', height: '180px'}} src={member.image}></img>
+                        <img src={member.image}></img>
                         <h3>{member.name}</h3>
                         <p>{member.role}</p>
                         </div>
@@ -135,6 +135,7 @@ export default function TeamSection() {
            ) )}
         </Swiper>
       </div>
+
     </section>
   );
 }

@@ -11,21 +11,23 @@ function Event(props) {
   return (
     <div style={props.style} >
         <div className={styles.panel}>
-        <h3 className={styles.eventSubtitle}>{props.pastEvent.event}</h3>
+        <h3 className={styles.eventSubtitle}>{props.Event.event}</h3>
         <EventPanel
-          eventdetail={props.pastEvent}
-          imgSrc={"/Posters/AIdebate.jpg"}
-          imgAlt={"pilot debate poster"}
+          eventdetail={props.Event}
+          imgSrc={props.Event.postersrc}
+          imgAlt={"event poster"}
         />
 
         <div style={{ marginTop: "4rem" }}>
           <a>
             Seating is limited so{" "}
-            <Link to="/sign-up" className={style.titlehighlight}>
+            <a href='https://docs.google.com/forms/d/e/1FAIpQLSc8HIoFHSl-LiX0NkgEFv_ZwOOOabvbuiPFW4IH1pcFCVW6Bg/viewform' className={style.titlehighlight}>
               Register Today!
-            </Link>
+            </a>
           </a>
         </div>
+        {props.speaker && props.speaker.length>0 ? (
+          <>
         <h3
           style={{ textAlign: "start", marginLeft: "70px", marginTop: "70px" }}
         >
@@ -42,6 +44,11 @@ function Event(props) {
             );
           })}
         </div>
+        </>
+        ) :(
+          <p></p>
+        )
+      }
       </div>
     </div>
   )

@@ -1,3 +1,4 @@
+import Button from '../Elements/Button';
 import TeamSection from '../UI/OurTeam';
 import styles from './About.module.css';
 
@@ -19,7 +20,7 @@ function About() {
         We're a student-led initiative—supported by the Office of Research—dedicated to building a culture of open dialogue, critical thinking, and diversity of thought on campus...
 
       </p>
-      <img src='/pilot/audience2.png' alt='audience image'></img>
+      <img className={styles.Aboutbodyimg} src='/pilot/audience2.png' alt='audience image'></img>
       <h2 className={styles.aboutTitle}>Our Story</h2>
       <p className={styles.aboutContent}>
         “What’s the Waterloo Forum?”
@@ -30,6 +31,14 @@ function About() {
       </p>
       <h2 className={styles.aboutTitle}>Our Team</h2>
       <TeamSection /> 
+      
+      <div className={styles.hiring}>
+      <h2>We are hiring! <br></br>Apply today 👇</h2>
+           <img className={styles.poster} src="/Posters/Hiring.png"></img>
+           <Button style={{margin: "20px"}}
+    
+           href={"https://docs.google.com/forms/d/e/1FAIpQLSdGtdUbIPLoKz_E6ZyfQmsRPRQ74kdtiNrZS9QPyeWgFYi-fg/viewform"}>Apply Here</Button>
+           </div>
     </div>
     </div>
   );

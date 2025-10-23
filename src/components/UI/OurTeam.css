@@ -103,6 +103,11 @@
 
 }
 
+.front-page img{
+  width: 170px;
+  height: 180px;
+}
+
 .back-page {
   display: none;
 }
@@ -116,16 +121,26 @@
   display: flex;
 }
 
-
+.poster {
+  width: 80%;
+  height: auto;
+}
 /* Responsive tweaks */
 @media (min-width: 768px) {
   .teamcard {
     padding: 1.25rem;
   }
+
+
 }
 
 @media (min-width: 1200px) {
   .teamcard {
     padding: 1.5rem;
+  }
+
+    .front-page img{
+    width: 150px;
+    height: 180px;
   }
 }

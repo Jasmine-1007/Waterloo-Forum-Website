@@ -7,6 +7,18 @@ import { useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 
 // Sample event details
+
+const GradHouseDetail = {
+  event: "Close Conversations",
+  title: "Do universities have a duty to restrict controversial speech on campus?",
+  date: "Nov.3rd 7pm, 2025",
+  location: "Grad House",
+  detail: "Join The Waterloo Forum for our discussion on the topic: “Do universities have a duty to restrict controversial speech on campus?” This event will bring students together on campus for an open exchange of ideas on the balance between free expression, academic values, and community responsibility. Participants will have the opportunity to share perspectives and ask questions in small-group discussions. Guided by thought-provoking prompts, we will reflect on the role universities play in fostering both intellectual freedom and respectful discourse.",
+  postersrc: "/Posters/CloseConversation.png"
+
+}
+
+
 const AIDebateDetail = {
   event: "AI Debate",
   title: "Will AI undermine Canadian Democratic Institutions?",
@@ -15,32 +27,32 @@ const AIDebateDetail = {
     "On July 31st, 2025, we hosted our first pilot debate as a kickoff for the club. The event featured engaging insights into the ethical implications of AI from both the technical and social perspectives.",
 };
 
-const speakers = [
-  {
-    id: "1",
-    name: "Dr. Paul Ward",
-    role: "Associate Professor, Associate Director, Software Engineering",
-    photo: "/speakers/Paulward.png",
-  },
-  {
-    id: "2",
-    name: "Dr. Florian Kerschbaum",
-    role: "Professor, Computer Science. Former executive director of the Waterloo Cybersecurity and Privacy Institute",
-    photo: "/speakers/Kerschbaum.png",
-  },
-  {
-    id: "3",
-    name: "Dr. Jesse Hoey",
-    role: "Professor and Director of Graduate Studies, Computer Science",
-    photo: "/speakers/Jessehoey.png",
-  },
-  {
-    id: "4",
-    name: "Dr. Matthew Silk",
-    role: "Instructor, AI in Education & Training, Machine Learning & Deep Learning",
-    photo: "/speakers/Matthewsilk.png",
-  },
-];
+// const speakers = [
+//   {
+//     id: "1",
+//     name: "Dr. Paul Ward",
+//     role: "Associate Professor, Associate Director, Software Engineering",
+//     photo: "/speakers/Paulward.png",
+//   },
+//   {
+//     id: "2",
+//     name: "Dr. Florian Kerschbaum",
+//     role: "Professor, Computer Science. Former executive director of the Waterloo Cybersecurity and Privacy Institute",
+//     photo: "/speakers/Kerschbaum.png",
+//   },
+//   {
+//     id: "3",
+//     name: "Dr. Jesse Hoey",
+//     role: "Professor and Director of Graduate Studies, Computer Science",
+//     photo: "/speakers/Jessehoey.png",
+//   },
+//   {
+//     id: "4",
+//     name: "Dr. Matthew Silk",
+//     role: "Instructor, AI in Education & Training, Machine Learning & Deep Learning",
+//     photo: "/speakers/Matthewsilk.png",
+//   },
+// ];
 
 function UpcomingEventPage() {
   function AIDebate() {}
@@ -71,10 +83,10 @@ function UpcomingEventPage() {
       <h2 id="aidebate" className={styles.eventTitle}>
         Fall 2025
       </h2>
-      <Event style={{display: "none"}} speaker = {speakers}
-      pastEvent = {AIDebateDetail}
+      <Event  speaker = {""}
+      Event = {GradHouseDetail}
     />
-    <h2>Stay Tuned for more Upcoming Events!</h2>
+    {/* <h2>Stay Tuned for more Upcoming Events!</h2> */}
       
 
       {/* <div className={styles.grid}>
