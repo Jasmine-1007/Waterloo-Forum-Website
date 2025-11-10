@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 import './index.css'
 import App from './App.jsx';
-import Event from './components/Pages/Event.jsx';
+import Event from './components/UI/Event.jsx';
 import Home from './components/Pages/Home.jsx';
 import About from './components/Pages/About.jsx';
 import NotFound from './components/Pages/NotFound.jsx';

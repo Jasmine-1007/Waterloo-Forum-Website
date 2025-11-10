@@ -36,11 +36,15 @@ const Header = () => {
 
                   <Link to="/event/pastevent#pilot" onClick={() => setIsOpen(false)} >Pilot Debate →</Link>
                 </div>
+                <div className="sub-dropdown-content">
+
+                  <Link to="/event/pastevent#aidebate" onClick={() => setIsOpen(false)} >AI Debate →</Link>
+                </div>
               </div>
               <div className="sub-dropdown">
                 <Link to="/event/upcomingevent" onClick={() => setIsOpen(false)}>Upcoming Events</Link>
                 <div className="sub-dropdown-content">
-                  <Link to="/event/upcomingevent#aidebate" onClick={() => setIsOpen(false)}>AI Debate →</Link>
+                  <Link to="/event/upcomingevent#aidebate" onClick={() => setIsOpen(false)}>Free Expression Debate →</Link>
                 </div>
               </div>
             </div>

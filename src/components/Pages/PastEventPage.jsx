@@ -11,13 +11,19 @@ import { useEffect } from 'react';
 const pastVideos = [
   {
     id: 1,
-    title: "Past event one",
+    title: "Pilot Debate | Should Universities Lift Restrictions on AI?",
     date: "2025-06-12",
-    youtubeId: "CfZdGgsbcoo",
+    youtubeId: "jbwb2d1dGr0",
+  },
+   {
+    id: 2,
+    title: "Will AI Undermine Democratic Institutions?",
+    date: "2025-09-17",
+    youtubeId: "cYd-Y11nYSM",
   },
 ];
 
-const pastEvent = {
+const pilotEvent = {
   title: 'Pilot Debate: Be it resolved that university should lift all restrictions on student assignments',
   date: 'July 31st, 2025',
   speaker: {
@@ -29,7 +35,7 @@ const pastEvent = {
     'On July 31st, 2025, we hosted our first pilot debate as a kickoff for the club. The event featured engaging insights into the ethical implications of AI from both the technical and social perspectives.',
 };
 
-const speakers = [
+const Pilotspeakers = [
   {
     id: '1',
     name: 'Dr. James Nugent',
@@ -43,6 +49,52 @@ const speakers = [
     photo: '/speakers/Jamesskidmore.png',
   },
 ];
+
+const AIDebateDetail = {
+  event: "AI Debate",
+  title: "Will AI undermine Canadian Democratic Institutions?",
+  date: "Sept.17th, 2025",
+  detail:
+    "AI is getting increasingly capable in shaping people's political perspectives and has penetrated Canadian democratic institutions including government agencies to help make decisions and speed up administration. Should we be concerned to give it more power to interfere with out democracy?",
+};
+
+const AIspeakers = [
+  {
+    id: "1",
+    name: "Dr. Paul Ward",
+    role: "Associate Professor, Associate Director, Software Engineering",
+    photo: "/speakers/Paulward.png",
+  },
+  {
+    id: "2",
+    name: "Dr. Florian Kerschbaum",
+    role: "Professor, Computer Science. Former executive director of the Waterloo Cybersecurity and Privacy Institute",
+    photo: "/speakers/Kerschbaum.png",
+  },
+  {
+    id: "3",
+    name: "Dr. Jesse Hoey",
+    role: "Professor and Director of Graduate Studies, Computer Science",
+    photo: "/speakers/Jessehoey.png",
+  },
+  {
+    id: "4",
+    name: "Dr. Matthew Silk",
+    role: "Instructor, AI in Education & Training, Machine Learning & Deep Learning",
+    photo: "/speakers/Matthewsilk.png",
+  },
+];
+
+
+const GradHouseDetail = {
+  event: "Close Conversations",
+  title: "Do universities have a duty to restrict controversial speech on campus?",
+  date: "Nov.3rd 7pm, 2025",
+  location: "Grad House",
+  detail: "Join The Waterloo Forum for our discussion on the topic: “Do universities have a duty to restrict controversial speech on campus?” This event will bring students together on campus for an open exchange of ideas on the balance between free expression, academic values, and community responsibility. Participants will have the opportunity to share perspectives and ask questions in small-group discussions. Guided by thought-provoking prompts, we will reflect on the role universities play in fostering both intellectual freedom and respectful discourse.",
+  postersrc: "/Posters/CloseConversation.png"
+
+}
 
 function PastEventPage() {
 
@@ -71,13 +123,13 @@ function PastEventPage() {
       <div  className={styles.panel}>
         <h3 className={styles.eventSubtitle}>• Pilot Debate</h3>
         <EventPanel
-          eventdetail={pastEvent}
+          eventdetail={pilotEvent}
           imgSrc="/pilot/debaters1.png"
           imgAlt="pilot debate poster"
         />
         <h3 className={styles.h3highlight}>Speakers:</h3>
         <div className={styles.speakerSection}>
-          {speakers.map((s) => (
+          {Pilotspeakers.map((s) => (
             <article key={s.id} className={styles.speakerCard}>
               <img className={styles.speakerImage} src={s.photo} alt={s.name} />
               <p className={styles.speakerName}>{s.name}</p>
@@ -86,6 +138,34 @@ function PastEventPage() {
             </article>
           ))}
         </div>
+      </div>
+      <h2 id='pilot' className={styles.eventTitle}>Fall 2025</h2>
+      <div  className={styles.panel}>
+        <h3 className={styles.eventSubtitle}>• AI Debate</h3>
+        <EventPanel
+          eventdetail={AIDebateDetail}
+          imgSrc="/Posters/AIDebate.jpg"
+          imgAlt="ai debate poster"
+        />
+        <h3 className={styles.h3highlight}>Speakers:</h3>
+        <div className={styles.speakerSection}>
+          {AIspeakers.map((s) => (
+            <article key={s.id} className={styles.speakerCard}>
+              <img className={styles.speakerImage} src={s.photo} alt={s.name} />
+              <p className={styles.speakerName}>{s.name}</p>
+              <p className={styles.speakerTitle}>{s.role}</p>
+              <p className={styles.speakerBio}>{s.bio}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+      <div  className={styles.panel}>
+        <h3 className={styles.eventSubtitle}>• Closed Conversation</h3>
+        <EventPanel
+          eventdetail={GradHouseDetail}
+          imgSrc="/Posters/CloseConversation.png"
+          imgAlt="close conversation poster"
+        />
       </div>
       <h3 className={styles.h3highlight}>Watch here:</h3>
       <div className={styles.grid}>
