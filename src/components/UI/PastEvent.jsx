@@ -8,13 +8,13 @@ const pastVideos = [
     id: 1,
     title: "Pilot Debate | Should Universities Lift Restrictions on AI?",
     date: "2025-07-31",
-    youtubeId: "jbwb2d1dGr0"},]
-  // {
-  //   id: 2,
-  //   title: "Past event two",
-  //   date: "2025-04-03",
-  //   youtubeId: "CfZdGgsbcoo"
-  // }]
+    youtubeId: "jbwb2d1dGr0"},
+    {
+      id: 2,
+    title: "Will AI Undermine Democratic Institutions?",
+    date: "2025-09-17",
+    youtubeId: "cYd-Y11nYSM"}
+]
 
 function PastEvent() {
   return (
