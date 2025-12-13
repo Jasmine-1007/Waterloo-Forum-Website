@@ -149,7 +149,7 @@ function PastEventPage() {
           ))}
         </div>
       </div>
-      <h2 id='pilot' className={styles.eventTitle}>Fall 2025</h2>
+      <h2 id='ai' className={styles.eventTitle}>Fall 2025</h2>
       <div  className={styles.panel}>
         <h3 className={styles.eventSubtitle}>• AI Debate</h3>
         <EventPanel
@@ -169,7 +169,7 @@ function PastEventPage() {
           ))}
         </div>
       </div>
-      <div  className={styles.panel}>
+      <div id='cc' className={styles.panel}>
         <h3 className={styles.eventSubtitle}>• Closed Conversation</h3>
         <EventPanel
           eventdetail={GradHouseDetail}
@@ -178,7 +178,7 @@ function PastEventPage() {
         />
       </div>
 
-      <div style={{marginTop: '4rem'}}  className={styles.panel}>
+      <div id='housedebate' style={{marginTop: '4rem'}}  className={styles.panel}>
         <h3 className={styles.eventSubtitle}>• House Debate</h3>
         <EventPanel
           eventdetail={HouseDebateDetail}

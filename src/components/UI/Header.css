@@ -150,5 +150,9 @@
     color: #daab2d;
   }
 
+  .sub-dropdown>a:hover{
+   color: #daab2d; 
+  }
+
   
 }

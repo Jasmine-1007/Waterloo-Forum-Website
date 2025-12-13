@@ -39,7 +39,7 @@ function Footer() {
            <div className={styles.contact}>
          
             <h4 className={styles.titlehighlight} >Contact Us</h4>
-            <p>Email: jordanbauman@uwaterloo.ca</p>
+            <p>Email: thewaterlooforum@gmail.com</p>
             <p>Address: 200 University Ave W, Waterloo, ON, Canada</p>
            
         </div>  </em>
