@@ -47,7 +47,7 @@ section {
   border-bottom: 1px solid black;
   margin: 9vw 8vw;
   text-align: start;
-  font-size: clamp(2.0em, 2.3rem, 2.7em);;
+  font-size: clamp(1.7em, 2.0rem, 2.3em);;
 }
 
 .eventSubtitle {
@@ -103,7 +103,7 @@ h3 {
 
 .h3highlight {
   width: fit-content;
-  margin: 2rem auto;
+  margin: 3rem auto;
   border-bottom: 1px solid black;
 }
 
@@ -177,6 +177,12 @@ h3 {
   }
   .debateImage {
     width: 500px;
+  }
+  .eventSubtitle {
+    font-size: 1.4rem;
+  }
+  .card {
+    max-width: 30rem;
   }
 }
 

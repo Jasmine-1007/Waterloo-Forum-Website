@@ -40,7 +40,7 @@ function UpcomingEventPage() {
         </div>
       </div>
       <h2 id="aidebate" className={styles.eventTitle}>
-        Fall 2025
+        Spring 2025
       </h2>
       {/* <Event  speaker = {""}
       Event = {GradHouseDetail}

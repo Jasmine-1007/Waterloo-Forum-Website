@@ -94,6 +94,16 @@ const GradHouseDetail = {
   detail: "Join The Waterloo Forum for our discussion on the topic: “Do universities have a duty to restrict controversial speech on campus?” This event will bring students together on campus for an open exchange of ideas on the balance between free expression, academic values, and community responsibility. Participants will have the opportunity to share perspectives and ask questions in small-group discussions. Guided by thought-provoking prompts, we will reflect on the role universities play in fostering both intellectual freedom and respectful discourse.",
   postersrc: "/Posters/CloseConversation.png"
 
+} 
+
+const HouseDebateDetail = {
+
+  event: "House Debate",
+  title: "Should Canada adopt stricter limits on freedom of expression?",
+  date: "Nov.25th 7pm, 2025",
+  location: "RCH 204",
+  detail: "Join us on November 25th at 7pm for a formal debate on the motion: “This House believes that Canada should adopt stricter limits on freedom of expression.” Speakers will present well-reasoned cases on both sides of the issue, examining the balance between individual liberties, public safety, and societal well-being. This event offers an opportunity to observe rigorous argumentation, engage with complex policy considerations, and deepen your understanding of how freedom of expression is protected and challenged within the Canadian context.",
+  postersrc: "/Posters/HouseDebate.png"
 }
 
 function PastEventPage() {
@@ -167,7 +177,16 @@ function PastEventPage() {
           imgAlt="close conversation poster"
         />
       </div>
-      <h3 className={styles.h3highlight}>Watch here:</h3>
+
+      <div style={{marginTop: '4rem'}}  className={styles.panel}>
+        <h3 className={styles.eventSubtitle}>• House Debate</h3>
+        <EventPanel
+          eventdetail={HouseDebateDetail}
+          imgSrc="/Posters/HouseDebate.png"
+          imgAlt="house debate poster"
+        />
+      </div>
+      <h3 className={styles.h3highlight}>Watch our past events here:</h3>
       <div className={styles.grid}>
         {pastVideos.map((v) => (
           <article key={v.id} className={styles.card}>
