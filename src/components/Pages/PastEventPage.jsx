@@ -106,6 +106,40 @@ const HouseDebateDetail = {
   postersrc: "/Posters/HouseDebate.png"
 }
 
+const ForumDebateDetail = {
+  event: "Forum Debate",
+  title: "Is Canada's future with Europe?",
+  date: "Feb.9th, 2026",
+  detail:
+    "AI is getting increasingly capable in shaping people's political perspectives and has penetrated Canadian democratic institutions including government agencies to help make decisions and speed up administration. Should we be concerned to give it more power to interfere with out democracy?",
+};
+
+const Forumpeakers = [
+  {
+    id: "1",
+    name: "Ken Jackson",
+    role: "Associate Professor of Economics",
+    photo: "/speakers/KenJackson.jpeg",
+  },
+  {
+    id: "2",
+    name: "Patricia Goff",
+    role: "Professor of Political Science",
+    photo: "/speakers/PatriciaGoff.jpg",
+  },
+  {
+    id: "3",
+    name: "Dan Ciuriak",
+    role: "Former fellow at CIGI",
+    photo: "/speakers/DanCiuriak.jpeg",
+  },
+  {
+    id: "4",
+    name: "David Welch",
+    role: "Professor of Political Science",
+    photo: "/speakers/DavidWelch.avif",
+  },
+];
 function PastEventPage() {
 
 
@@ -185,6 +219,26 @@ function PastEventPage() {
           imgSrc="/Posters/HouseDebate.png"
           imgAlt="house debate poster"
         />
+      </div>
+      <h2 id='winter2026' className={styles.eventTitle}>Winter 2026</h2>
+          <div  className={styles.panel}>
+        <h3 className={styles.eventSubtitle}>• Forum Debate</h3>
+        <EventPanel
+          eventdetail={ForumDebateDetail}
+          imgSrc="/Posters/ForumDebate.webp"
+          imgAlt="forum debate poster"
+        />
+        <h3 className={styles.h3highlight}>Speakers:</h3>
+        <div className={styles.speakerSection}>
+          {Forumpeakers.map((s) => (
+            <article key={s.id} className={styles.speakerCard}>
+              <img className={styles.speakerImage} src={s.photo} alt={s.name} />
+              <p className={styles.speakerName}>{s.name}</p>
+              <p className={styles.speakerTitle}>{s.role}</p>
+              <p className={styles.speakerBio}>{s.bio}</p>
+            </article>
+          ))}
+        </div>
       </div>
       <h3 className={styles.h3highlight}>Watch our past events here:</h3>
       <div className={styles.grid}>

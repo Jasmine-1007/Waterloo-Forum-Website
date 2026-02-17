@@ -34,19 +34,16 @@ const Header = () => {
                 <Link to="/event/pastevent" onClick={() => setIsOpen(false)}>Past Events</Link>
                 <div className="sub-dropdown-content">
 
-                  <Link to="/event/pastevent#pilot" onClick={() => setIsOpen(false)} >Pilot Debate →</Link>
+                  <Link to="/event/pastevent#pilot" onClick={() => setIsOpen(false)} >Summer 2025 →</Link>
                 </div>
                 <div className="sub-dropdown-content">
 
-                  <Link to="/event/pastevent#ai" onClick={() => setIsOpen(false)} >AI Debate →</Link>
+                  <Link to="/event/pastevent#ai" onClick={() => setIsOpen(false)} >Fall 2025 →</Link>
                 </div>
 
                 <div className="sub-dropdown-content">
-                  <Link to="/event/pastevent#cc" onClick={() => setIsOpen(false)} >Closed Conversation →</Link>
+                  <Link to="/event/pastevent#winter2026" onClick={() => setIsOpen(false)} >Winter 2026 →</Link>
                   </div> 
-                 <div className="sub-dropdown-content">
-                  <Link to="/event/pastevent#housedebate" onClick={() => setIsOpen(false)} >House Debate →</Link>
-                  </div>
               </div>
               <div className="sub-dropdown">
                 <Link to="/event/upcomingevent" onClick={() => setIsOpen(false)}>Upcoming Events</Link>
