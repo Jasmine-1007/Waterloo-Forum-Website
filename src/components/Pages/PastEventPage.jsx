@@ -1,12 +1,11 @@
-import React from 'react';
-import styles from './PastEventPage.module.css';
-import Button from '../Elements/Button';
-import Card from '../Elements/Card';
-import EventPanel from '../Elements/EventPanel';
-import { useLocation} from 'react-router-dom';
-import { useEffect } from 'react';
-
-
+import React from "react";
+import styles from "./PastEventPage.module.css";
+import Button from "../Elements/Button";
+import Card from "../Elements/Card";
+import EventPanel from "../Elements/EventPanel";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { cur_eventdetail } from "./Home";
 
 const pastVideos = [
   {
@@ -15,7 +14,7 @@ const pastVideos = [
     date: "2025-06-12",
     youtubeId: "jbwb2d1dGr0",
   },
-   {
+  {
     id: 2,
     title: "Will AI Undermine Democratic Institutions?",
     date: "2025-09-17",
@@ -24,29 +23,30 @@ const pastVideos = [
 ];
 
 const pilotEvent = {
-  title: 'Pilot Debate: Be it resolved that university should lift all restrictions on student assignments',
-  date: 'July 31st, 2025',
+  title:
+    "Pilot Debate: Be it resolved that university should lift all restrictions on student assignments",
+  date: "July 31st, 2025",
   speaker: {
-    name: 'Dr. Jane Doe',
-    role: 'AI Researcher at FutureTech',
-    photo: '/images/speakers/jane.jpg',
+    name: "Dr. Jane Doe",
+    role: "AI Researcher at FutureTech",
+    photo: "/images/speakers/jane.jpg",
   },
   detail:
-    'On July 31st, 2025, we hosted our first pilot debate as a kickoff for the club. The event featured engaging insights into the ethical implications of AI from both the technical and social perspectives.',
+    "On July 31st, 2025, we hosted our first pilot debate as a kickoff for the club. The event featured engaging insights into the ethical implications of AI from both the technical and social perspectives.",
 };
 
 const Pilotspeakers = [
   {
-    id: '1',
-    name: 'Dr. James Nugent',
-    role: 'Associate Professor, Teaching Stream, Faculty of Environment',
-    photo: '/speakers/Jamesnugent.png',
+    id: "1",
+    name: "Dr. James Nugent",
+    role: "Associate Professor, Teaching Stream, Faculty of Environment",
+    photo: "/speakers/Jamesnugent.png",
   },
   {
-    id: '2',
-    name: 'Dr. James Skidmore',
-    role: 'Department Chair, Professor and Director, Waterloo Centre for German Studies',
-    photo: '/speakers/Jamesskidmore.png',
+    id: "2",
+    name: "Dr. James Skidmore",
+    role: "Department Chair, Professor and Director, Waterloo Centre for German Studies",
+    photo: "/speakers/Jamesskidmore.png",
   },
 ];
 
@@ -85,26 +85,26 @@ const AIspeakers = [
   },
 ];
 
-
 const GradHouseDetail = {
   event: "Close Conversations",
-  title: "Do universities have a duty to restrict controversial speech on campus?",
+  title:
+    "Do universities have a duty to restrict controversial speech on campus?",
   date: "Nov.3rd 7pm, 2025",
   location: "Grad House",
-  detail: "Join The Waterloo Forum for our discussion on the topic: “Do universities have a duty to restrict controversial speech on campus?” This event will bring students together on campus for an open exchange of ideas on the balance between free expression, academic values, and community responsibility. Participants will have the opportunity to share perspectives and ask questions in small-group discussions. Guided by thought-provoking prompts, we will reflect on the role universities play in fostering both intellectual freedom and respectful discourse.",
-  postersrc: "/Posters/CloseConversation.png"
-
-} 
+  detail:
+    "Join The Waterloo Forum for our discussion on the topic: “Do universities have a duty to restrict controversial speech on campus?” This event will bring students together on campus for an open exchange of ideas on the balance between free expression, academic values, and community responsibility. Participants will have the opportunity to share perspectives and ask questions in small-group discussions. Guided by thought-provoking prompts, we will reflect on the role universities play in fostering both intellectual freedom and respectful discourse.",
+  postersrc: "/Posters/CloseConversation.png",
+};
 
 const HouseDebateDetail = {
-
   event: "House Debate",
   title: "Should Canada adopt stricter limits on freedom of expression?",
   date: "Nov.25th 7pm, 2025",
   location: "RCH 204",
-  detail: "Join us on November 25th at 7pm for a formal debate on the motion: “This House believes that Canada should adopt stricter limits on freedom of expression.” Speakers will present well-reasoned cases on both sides of the issue, examining the balance between individual liberties, public safety, and societal well-being. This event offers an opportunity to observe rigorous argumentation, engage with complex policy considerations, and deepen your understanding of how freedom of expression is protected and challenged within the Canadian context.",
-  postersrc: "/Posters/HouseDebate.png"
-}
+  detail:
+    "Join us on November 25th at 7pm for a formal debate on the motion: “This House believes that Canada should adopt stricter limits on freedom of expression.” Speakers will present well-reasoned cases on both sides of the issue, examining the balance between individual liberties, public safety, and societal well-being. This event offers an opportunity to observe rigorous argumentation, engage with complex policy considerations, and deepen your understanding of how freedom of expression is protected and challenged within the Canadian context.",
+  postersrc: "/Posters/HouseDebate.png",
+};
 
 const ForumDebateDetail = {
   event: "Forum Debate",
@@ -140,31 +140,42 @@ const Forumpeakers = [
     photo: "/speakers/DavidWelch.avif",
   },
 ];
+
+const PoliticsDebateDetail = {
+  event: "Liberal VS Conservative Debate",
+  title: "",
+  date: "Mar.18th, 2026",
+  detail:
+    "Join us for a live debate at the University of Waterloo between Hon. Nate Erskine-Smith (@beynate), Liberal MP for Beaches—East York and Dr. Matt Strauss (@mattstraussksh), Conservative MP for Kitchener South—Hespeler.",
+};
+
+const HouseDebateIIDetail = cur_eventdetail;
+
 function PastEventPage() {
-
-
   const location = useLocation();
 
-  useEffect(()=> {
-    if(location.hash){
-      setTimeout(()=> {
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
         const loc = document.querySelector(location.hash);
-        if(loc){
-          loc.scrollIntoView({behavior: 'smooth' });
+        if (loc) {
+          loc.scrollIntoView({ behavior: "smooth" });
         }
-      })
+      });
     }
-  })
+  });
 
   return (
     <section className={styles.section} aria-labelledby="past-events-heading">
       <div className={styles.imageContainer}>
-  <img src="/groupphoto.jpg" alt="Event Header" />
-  <h2 class={styles.overlayTitle}>Past Events</h2>
-</div>
+        <img src="/groupphoto.jpg" alt="Event Header" />
+        <h2 class={styles.overlayTitle}>Past Events</h2>
+      </div>
 
-      <h2 id='pilot' className={styles.eventTitle}>Summer 2025</h2>
-      <div  className={styles.panel}>
+      <h2 id="pilot" className={styles.eventTitle}>
+        Summer 2025
+      </h2>
+      <div className={styles.panel}>
         <h3 className={styles.eventSubtitle}>• Pilot Debate</h3>
         <EventPanel
           eventdetail={pilotEvent}
@@ -183,8 +194,10 @@ function PastEventPage() {
           ))}
         </div>
       </div>
-      <h2 id='ai' className={styles.eventTitle}>Fall 2025</h2>
-      <div  className={styles.panel}>
+      <h2 id="ai" className={styles.eventTitle}>
+        Fall 2025
+      </h2>
+      <div className={styles.panel}>
         <h3 className={styles.eventSubtitle}>• AI Debate</h3>
         <EventPanel
           eventdetail={AIDebateDetail}
@@ -203,7 +216,7 @@ function PastEventPage() {
           ))}
         </div>
       </div>
-      <div id='cc' className={styles.panel}>
+      <div id="cc" className={styles.panel}>
         <h3 className={styles.eventSubtitle}>• Closed Conversation</h3>
         <EventPanel
           eventdetail={GradHouseDetail}
@@ -212,7 +225,11 @@ function PastEventPage() {
         />
       </div>
 
-      <div id='housedebate' style={{marginTop: '4rem'}}  className={styles.panel}>
+      <div
+        id="housedebate"
+        style={{ marginTop: "4rem" }}
+        className={styles.panel}
+      >
         <h3 className={styles.eventSubtitle}>• House Debate</h3>
         <EventPanel
           eventdetail={HouseDebateDetail}
@@ -220,8 +237,10 @@ function PastEventPage() {
           imgAlt="house debate poster"
         />
       </div>
-      <h2 id='winter2026' className={styles.eventTitle}>Winter 2026</h2>
-          <div  className={styles.panel}>
+      <h2 id="winter2026" className={styles.eventTitle}>
+        Winter 2026
+      </h2>
+      <div className={styles.panel}>
         <h3 className={styles.eventSubtitle}>• Forum Debate</h3>
         <EventPanel
           eventdetail={ForumDebateDetail}
@@ -239,6 +258,11 @@ function PastEventPage() {
             </article>
           ))}
         </div>
+        <EventPanel
+          eventdetail={PoliticsDebateDetail}
+          imgSrc="/Posters/lib_con_debate.png"
+          imgAlt="liberal versus conservative debate poster"
+        />
       </div>
       <h3 className={styles.h3highlight}>Watch our past events here:</h3>
       <div className={styles.grid}>
@@ -262,7 +286,7 @@ function PastEventPage() {
       </div>
       <button
         className="continue-button"
-        style={{ marginTop: '20px', fontSize: '15px' }}
+        style={{ marginTop: "20px", fontSize: "15px" }}
         onClick={() => window.open("https://www.youtube.com/@DRMSH", "_blank")}
       >
         <em>Watch on Our YouTube Channel</em> ➙

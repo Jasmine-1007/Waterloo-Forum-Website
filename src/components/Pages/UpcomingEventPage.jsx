@@ -5,10 +5,13 @@ import Card from "../Elements/Card";
 import Event from "../UI/Event";
 import { useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
+import {cur_eventdetail} from "./Home";
+import EventPanel from "../Elements/EventPanel";
 
 // Sample event details
 
 
+const HouseDebateIIDetail = cur_eventdetail;
 
 
 
@@ -40,12 +43,15 @@ function UpcomingEventPage() {
         </div>
       </div>
       <h2 id="aidebate" className={styles.eventTitle}>
-        Spring 2025
+        Winter 2026
       </h2>
-      {/* <Event  speaker = {""}
-      Event = {GradHouseDetail}
-    /> */}
-    <h2>Stay Tuned for more Upcoming Events!</h2>
+      <EventPanel 
+      eventdetail={HouseDebateIIDetail} 
+      imgSrc="/Posters/march_debate.png" 
+      imgAlt="march house debate poster"
+      ></EventPanel>
+
+    <h2 style={{display: "none"}}>Stay Tuned for more Upcoming Events!</h2>
       
 
       {/* <div className={styles.grid}>
