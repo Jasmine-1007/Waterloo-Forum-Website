@@ -5,7 +5,7 @@ import Card from "../Elements/Card";
 import EventPanel from "../Elements/EventPanel";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { cur_eventdetail } from "./Home";
+import { cur_eventdetail } from "../UI/EventData";
 
 const pastVideos = [
   {
@@ -258,6 +258,8 @@ function PastEventPage() {
             </article>
           ))}
         </div>
+        <h3 className={styles.eventSubtitle}>• Lib V Con Debate</h3>
+
         <EventPanel
           eventdetail={PoliticsDebateDetail}
           imgSrc="/Posters/lib_con_debate.png"

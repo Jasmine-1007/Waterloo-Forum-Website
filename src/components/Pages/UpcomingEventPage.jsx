@@ -5,8 +5,8 @@ import Card from "../Elements/Card";
 import Event from "../UI/Event";
 import { useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
-import {cur_eventdetail} from "./Home";
 import EventPanel from "../Elements/EventPanel";
+import { cur_eventdetail } from "../UI/EventData";
 
 // Sample event details
 
@@ -28,6 +28,10 @@ function UpcomingEventPage() {
           loc.scrollIntoView({ behavior: "smooth" });
         }
       });
+    }
+    else 
+    {
+      window.scrollTo({top: 0, behavior: "smooth" });
     }
   });
   return (
