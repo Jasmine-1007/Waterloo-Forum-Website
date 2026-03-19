@@ -17,23 +17,26 @@ const HouseDebateIIDetail = cur_eventdetail;
 
 
 function UpcomingEventPage() {
-  function AIDebate() {}
   const location = useLocation();
 
   useEffect(() => {
-    if (location.hash) {
-      setTimeout(() => {
+    if (location.hash) 
+      {
+      const timeout = setTimeout(() => {
         const loc = document.querySelector(location.hash);
-        if (loc) {
+        if (loc) 
+          {
           loc.scrollIntoView({ behavior: "smooth" });
         }
-      });
+      }, 100);
+
+      return ()=> {clearTimeout(timeout)}
     }
     else 
     {
       window.scrollTo({top: 0, behavior: "smooth" });
     }
-  });
+  }, [location]);
   return (
     <section className={styles.section} aria-labelledby="past-events-heading">
       <div className={styles.pasteventheader}>
