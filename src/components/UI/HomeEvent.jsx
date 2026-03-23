@@ -5,11 +5,7 @@ import EventPanel from "../Elements/EventPanel";
 import Button from "../Elements/Button";
 import { cur_eventdetail } from "./EventData";
 
-
 function HomeEvent() {
-  
-  
-
   return (
     <div className={styles.eventSection}>
       <div className={styles.header}>
@@ -18,9 +14,10 @@ function HomeEvent() {
           <h2>Upcoming Event</h2>
         </div>
       </div>
-      <div 
-      // style={{ display: "none" }} 
-      className={styles.eventContent}>
+      <div
+        // style={{ display: "none" }}
+        className={styles.eventContent}
+      >
         <EventPanel
           eventdetail={cur_eventdetail}
           imgSrc={"/assets/social-media.jpg"}
@@ -30,13 +27,18 @@ function HomeEvent() {
           <h2 style={{ margin: "3.5rem" }}>Register Now!</h2>
 
           {/* add href for form later  */}
-          <Button style={{display: "none", width: "150px", margin: "50px auto" }}>
+          <Button
+            href={
+              "https://docs.google.com/forms/d/e/1FAIpQLScYUQq_K4hoq7LVGqiMTXzxLTw9IWsjKp0OHgpqWZLTn8WakA/viewform?usp=dialog"
+            }
+            style={{ width: "150px", margin: "50px auto" }}
+          >
             REGISTER TODAY
           </Button>
         </div>
       </div>
       <div>
-        <h2>Stay tuned for more upcoming events!</h2>
+        {/* <h2>Stay tuned for more upcoming events!</h2> */}
       </div>
     </div>
   );
